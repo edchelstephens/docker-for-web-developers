@@ -21,3 +21,10 @@ Example images:
 # An image is a read-only template composed of layered filesystems used to share common files and create Docker container instances
 
 # A container is an isolated and secured shipping container created from an image that can be run, started, stopped, moved and deleted
+
+# Docker Benefits for Web Developers
+
+- Accelerate Developer Onboarding
+- Eliminate App Conflicts
+- Environment Consistency
+- Ship Software Faster
