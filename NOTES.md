@@ -29,22 +29,42 @@ Example images:
 - Environment Consistency
 - Ship Software Faster
 
-
 # Docker Run Command
+
 ## Running on specified port
+
 `docker run -p <machine_port_number>:<forward_to_container_port_number> <image_name>`
 
 For example:
 `docker run -p 80:80 kitematic/hello-world-nginx`
 
-
 # Docker Key Commands
 
 ## Image
+
 - `docker pull [image name]`
   - pull an image from docker hub
 - `docker images`
   - see list of all iamges
-∆
 - `docker rmi [image Id]`
   - removes image
+
+## Container
+
+- `docker run [image name]`
+
+  - run image on container
+  - if run doesn't find image, it will automatically download it and run
+
+- `docker stop [image name]`
+  - stop the running container
+- `docker ps`
+
+  - list all running containers
+
+- `docker ps -a`
+
+  - list all containers
+
+- `docker rm [container ID]`
+  - remove container
