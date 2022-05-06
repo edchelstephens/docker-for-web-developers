@@ -28,3 +28,11 @@ Example images:
 - Eliminate App Conflicts
 - Environment Consistency
 - Ship Software Faster
+
+
+# Docker Run Command
+## Running on specified port
+`docker run -p <machine_port_number>:<forward_to_container_port_number> <image_name>`
+
+For example:
+`docker run -p 80:80 kitematic/hello-world-nginx`
