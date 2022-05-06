@@ -36,3 +36,15 @@ Example images:
 
 For example:
 `docker run -p 80:80 kitematic/hello-world-nginx`
+
+
+# Docker Key Commands
+
+## Image
+- `docker pull [image name]`
+  - pull an image from docker hub
+- `docker images`
+  - see list of all iamges
+∆
+- `docker rmi [image Id]`
+  - removes image
