@@ -140,3 +140,43 @@ Any changes made while a container is running that are written to the writable l
 # Mouting
 
 Mounting is a process by which the operating system makes files and directories on a storage device (such as hard drive, CD-ROM, or network share) available for users to access via the computer's file system.
+
+# Creating a Data Volume
+
+`docker run -p <external_port>:<internal_port> <image> -v <data_volume> <image>`
+
+Where:
+`-p` is for port
+`-v` is for volume
+
+Example:
+If we want a special are that node can write to, a data volume we say:
+
+`docker run -p 8080:300 node -v /var/www/ node`
+
+Where:
+`node` is the image name
+`/var/www/` is the data volume
+
+# Locating a Volume
+
+`docker inspect <container>`
+
+it will give you a list-like or array like datastructure containing objects printed,
+
+The volume will be on the `"Mounts"` key
+located on the `Source` key
+
+e.g.
+
+...
+"Mounts": [
+{
+  "name": "d13gs",
+  "Source": "mnt/.../var/lib/docker/volumes/d3agxyaf/_data",
+  "Destination": "/var/www",
+  "Driver": "local",
+  "RW": true,
+}
+]
+...
