@@ -129,9 +129,14 @@ Any changes made while a container is running that are written to the writable l
 - So if you're running on a Linux System or a Window Server 2016 or a higher type of system, then the host would be that OS.
 
 # Writing to a volume
+
 - We can define a volume to a container
 - When you write to a data volume from within your container, for example
   /var/www/ path
 - That is really just going to be an alias for a mounte folder that is in the Operating System or the Docker host.
 - So when we have a volume that we wrote to, instead of writing into that thin read/write type of layer that is associated with the container, it can actually write it up into this mounted folder are that's part of the Docker host or the operating system the docker container is running on top of.
 - Even if you delete the container, the data volume or mounted folder that's on your Docker host can actuall stick around and you can preserve all of that code if you'd like.
+
+# Mouting
+
+Mounting is a process by which the operating system makes files and directories on a storage device (such as hard drive, CD-ROM, or network share) available for users to access via the computer's file system.
