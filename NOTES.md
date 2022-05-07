@@ -127,3 +127,9 @@ Any changes made while a container is running that are written to the writable l
 - It is the thing that the container is atually running on top of.
 - Remember containers are sort of virtual os, and the main os running these containers is actually the Docker host.
 - So if you're running on a Linux System or a Window Server 2016 or a higher type of system, then the host would be that OS.
+
+
+# Writing to a volume
+- When you write to a data volume from within your container, for example
+/var/www/ path
+- That is really just going to be an alias for a mounte folder that is in the Operating System or the Docker host.
