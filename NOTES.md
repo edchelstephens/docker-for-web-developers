@@ -180,3 +180,6 @@ e.g.
 }
 ]
 ...
+
+The actual location of the volume is in the Host or OS with the path specified in the `Source` key
+The `Destination` key is the volume locator in the container.
