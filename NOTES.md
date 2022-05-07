@@ -90,7 +90,13 @@ Ubuntu Image
 
 with d3a3f as the bottom layer.
 
-- The file system and the layers that compose it within a given image are READ ONLY(R/0).
+# The file system and the layers that compose it within a given image are READ ONLY(R/0).
+
 - Image Layers are Read Only
 - Once the image is baked, you're not going to be writing anything to that image from a container, for instance.
 - The image has the files, they're kind of hard-coded in the image, and they're ready to go and be used, but you can't actually write to this.
+
+# While images and the file system they have is read only, a container builds on top of this and gets its own thin read/write (R/W) layer.
+
+- This is the main distinguishing factor between a container and an image
+- An image is a set of read only layers whereas a container has a thin read/write layer
