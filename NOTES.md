@@ -128,8 +128,10 @@ Any changes made while a container is running that are written to the writable l
 - Remember containers are sort of virtual os, and the main os running these containers is actually the Docker host.
 - So if you're running on a Linux System or a Window Server 2016 or a higher type of system, then the host would be that OS.
 
-
 # Writing to a volume
+
 - When you write to a data volume from within your container, for example
-/var/www/ path
+  /var/www/ path
 - That is really just going to be an alias for a mounte folder that is in the Operating System or the Docker host.
+- So when we have a volume that we wrote to, instead of writing into that thin read/write type of layer that is associated with the container, it can actually write it up into this mounted folder are that's part of the Docker host or the operating system the docker container is running on top of.
+- Even if you delete the container, the data volume or mounted folder that's on your Docker host can actuall stick around and you can preserve all of that code if you'd like.
