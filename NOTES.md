@@ -68,3 +68,10 @@ For example:
 
 - `docker rm [container ID]`
   - remove container
+
+
+# How to get source code into a container?
+
+1. Create a container volume that points to the source code
+2. Add your source code into a custom image that is used to create a container
+
