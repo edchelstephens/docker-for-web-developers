@@ -69,9 +69,28 @@ For example:
 - `docker rm [container ID]`
   - remove container
 
-
 # How to get source code into a container?
 
 1. Create a container volume that points to the source code
 2. Add your source code into a custom image that is used to create a container
 
+# Layered File System
+
+- Docker images and containers are built on a layered file system, which is a layer of files that build upon each other.
+
+Like a stack of files.
+
+Example Image: Ubuntu image from docker hub:
+
+gsw8s
+sgshw
+asx41
+d3a3f
+Ubuntu Image
+
+with d3a3f as the bottom layer.
+
+- The file system and the layers that compose it within a given image are READ ONLY(R/0).
+- Image Layers are Read Only
+- Once the image is baked, you're not going to be writing anything to that image from a container, for instance.
+- The image has the files, they're kind of hard-coded in the image, and they're ready to go and be used, but you can't actually write to this.
