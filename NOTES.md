@@ -100,3 +100,30 @@ with d3a3f as the bottom layer.
 
 - This is the main distinguishing factor between a container and an image
 - An image is a set of read only layers whereas a container has a thin read/write layer
+
+Any changes made while a container is running that are written to the writable layer, they kinda go away if the container is removed. So if you delete the container, you're also going to delete the file layer that is the read/write layer.
+
+# Volumes
+
+## What is a volume?
+
+- Volume is a special type of directory in a container(the read write layer) typically referred to as a `data volume`
+- In the data volume, we can store all types of data:
+  - code
+  - log files,
+  - data files,
+  - database,
+  - images and more
+- These data can be shared and reused among containers
+- It's possible for multiple containers to write to this volume,
+  or you could just have a single container that has one or more volumes it writes to
+- Any update to an image aren't going to affect a data volume, it stays separate
+- Data volumes are persistent
+- Even if a container is deleted and it's completely blown away from the machine, the data volume can still stick around and you have control over that. :)
+
+# Docker host
+
+- The docker host is actually the thing hosting the container, meaning the Operating System where the docker container is running
+- It is the thing that the container is atually running on top of.
+- Remember containers are sort of virtual os, and the main os running these containers is actually the Docker host.
+- So if you're running on a Linux System or a Window Server 2016 or a higher type of system, then the host would be that OS.
