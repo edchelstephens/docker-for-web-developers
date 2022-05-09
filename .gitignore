@@ -133,3 +133,5 @@ node_modules/*
 express_site/node_modules/*
 
 exercise_files/*
+
+.DS_Store
