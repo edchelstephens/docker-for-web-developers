@@ -141,7 +141,7 @@ Any changes made while a container is running that are written to the writable l
 
 Mounting is a process by which the operating system makes files and directories on a storage device (such as hard drive, CD-ROM, or network share) available for users to access via the computer's file system.
 
-# Creating a Data Volume
+# Creating a Data Volume using docker defaults
 
 `docker run -p <external_port>:<internal_port> <image> -v <data_volume> <image>`
 
@@ -172,14 +172,47 @@ e.g.
 ...
 "Mounts": [
 {
-  "name": "d13gs",
-  "Source": "mnt/.../var/lib/docker/volumes/d3agxyaf/_data",
-  "Destination": "/var/www",
-  "Driver": "local",
-  "RW": true,
+"name": "d13gs",
+"Source": "mnt/.../var/lib/docker/volumes/d3agxyaf/_data",
+"Destination": "/var/www",
+"Driver": "local",
+"RW": true,
 }
 ]
 ...
 
 The actual location of the volume is in the Host or OS with the path specified in the `Source` key
 The `Destination` key is the volume locator in the container.
+
+# Creating a Custom Data volume
+
+`docker run -p 8080:300 node -v $(pwd):/var/www node`
+
+Where:
+`-v $(pwd)` means go to the current working direcrtory and and use that as the host mount.
+In other words, use that as the folder where I want to put my source code, or database, or image files, etc
+
+`/var/www` is the container volume.
+
+While running the container when you read or write to `/var/www`, then the container is actually going to look in the host location, which would be the current working directory.
+
+So if you set up a `src/` folder and that's where you ran the command prompt from,
+then that would be your current working directory.
+
+When we do an inspect:
+
+`docker inspect mycontainer`
+
+it gives:
+
+...
+"Mounts": [
+{
+"Name": "atyg2sgh..",
+"Source": "srcr/", # The host location as specified in the create volume command
+"Destination": "/var/www"/, # The container data volume
+"Driver": "local",
+"RW": true,
+}
+]
+...
