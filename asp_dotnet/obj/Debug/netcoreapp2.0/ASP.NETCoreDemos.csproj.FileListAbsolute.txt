@@ -1,0 +1,15 @@
+/app/bin/Debug/netcoreapp2.0/appsettings.Development.json
+/app/bin/Debug/netcoreapp2.0/appsettings.json
+/app/bin/Debug/netcoreapp2.0/bundleconfig.json
+/app/bin/Debug/netcoreapp2.0/ASP.NETCoreDemos.deps.json
+/app/bin/Debug/netcoreapp2.0/ASP.NETCoreDemos.runtimeconfig.json
+/app/bin/Debug/netcoreapp2.0/ASP.NETCoreDemos.runtimeconfig.dev.json
+/app/bin/Debug/netcoreapp2.0/ASP.NETCoreDemos.dll
+/app/bin/Debug/netcoreapp2.0/ASP.NETCoreDemos.pdb
+/app/obj/Debug/netcoreapp2.0/ASP.NETCoreDemos.csprojAssemblyReference.cache
+/app/obj/Debug/netcoreapp2.0/ASP.NETCoreDemos.AssemblyInfoInputs.cache
+/app/obj/Debug/netcoreapp2.0/ASP.NETCoreDemos.AssemblyInfo.cs
+/app/obj/Debug/netcoreapp2.0/ASP.NETCoreDemos.csproj.CoreCompileInputs.cache
+/app/obj/Debug/netcoreapp2.0/ASP.NETCoreDemos.dll
+/app/obj/Debug/netcoreapp2.0/ASP.NETCoreDemos.pdb
+/app/obj/Debug/netcoreapp2.0/ASP.NETCoreDemos.genruntimeconfig.cache
