@@ -218,3 +218,10 @@ it gives:
 ...
 
 - The container volume `/var/www/` is just like an alias(sort of) to the actual `src/` folder in the docker host, where all the file read and writes will be performed by this container.
+
+# Specify working directory when running a container:
+
+`docker run -p <external_port>:<internal_container_port> -v $(pwd):/src -w "/src" node npm start`
+
+Where:
+-w command says, that in the running container, run the node command npm start at the container /src folder which is an alias for the current working directory.
