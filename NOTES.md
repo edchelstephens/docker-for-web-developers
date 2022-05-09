@@ -209,10 +209,12 @@ it gives:
 "Mounts": [
 {
 "Name": "atyg2sgh..",
-"Source": "srcr/", # The host location as specified in the create volume command
+"Source": "src/", # The host location as specified in the create volume command
 "Destination": "/var/www"/, # The container data volume
 "Driver": "local",
 "RW": true,
 }
 ]
 ...
+
+- The container volume `/var/www/` is just like an alias(sort of) to the actual `src/` folder in the docker host, where all the file read and writes will be performed by this container.
