@@ -235,3 +235,5 @@ NOTE:
 - You only need the `-v` when you want to delete the docker managed volumes, that is, volumes that docker automatically mounted on the docker host, something we did not set ourselves like:
 
 `docker run -p <external_port>:<internal_container_port> -v $(pwd):/src -w "/src" node npm start`
+
+- You only want to remove the volume when you're down to your last container, because other containers might be using it.
