@@ -237,3 +237,10 @@ NOTE:
 `docker run -p <external_port>:<internal_container_port> -v $(pwd):/src -w "/src" node npm start`
 
 - You only want to remove the volume when you're down to your last container, because other containers might be using it.
+
+
+# Linking our source code to a container via container volume
+
+- We can link our source code to a container by specifing the volume with -v using $(pwd) on our project source code working directory
+- Now we can just get Node or Python or PHP, or ASP.NET or whatever it may be up and running as a container.
+- We don't have to install anything on our local machine. We just to have to get that image (the python or node image, etc) running and then we can simply create a volume that links into our source code and then we're off and running! :)
