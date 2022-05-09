@@ -225,3 +225,13 @@ it gives:
 
 Where:
 -w command says, that in the running container, run the node command npm start at the container /src folder which is an alias for the current working directory.
+
+
+# Removing volumes
+
+`docker rm -v lastContainer`
+
+NOTE:
+- You only need the `-v` when you want to delete the docker managed volumes, that is, volumes that docker automatically mounted on the docker host, something we did not set ourselves like:
+
+`docker run -p <external_port>:<internal_container_port> -v $(pwd):/src -w "/src" node npm start`
