@@ -226,21 +226,25 @@ it gives:
 Where:
 -w command says, that in the running container, run the node command npm start at the container /src folder which is an alias for the current working directory.
 
-
 # Removing volumes
 
 `docker rm -v lastContainer`
 
 NOTE:
+
 - You only need the `-v` when you want to delete the docker managed volumes, that is, volumes that docker automatically mounted on the docker host, something we did not set ourselves like:
 
 `docker run -p <external_port>:<internal_container_port> -v $(pwd):/src -w "/src" node npm start`
 
 - You only want to remove the volume when you're down to your last container, because other containers might be using it.
 
-
 # Linking our source code to a container via container volume
 
 - We can link our source code to a container by specifing the volume with -v using $(pwd) on our project source code working directory
 - Now we can just get Node or Python or PHP, or ASP.NET or whatever it may be up and running as a container.
 - We don't have to install anything on our local machine. We just to have to get that image (the python or node image, etc) running and then we can simply create a volume that links into our source code and then we're off and running! :)
+
+# Recap: How do you get source code into a container?
+
+1. Create a container volume that points to the source code
+2. Add your souce code into a custom image that is used to create a container
