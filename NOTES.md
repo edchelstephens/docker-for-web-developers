@@ -257,4 +257,5 @@ Dockerfile
 - These instructions of course are uinique to Docker 
 - We run the Dockerfile through the Docker client and it has a `build` command we can run and then that `build` command can read through those
 instructions, generate a layered file system to generate a Docker image that we can then use to make a container from it.
+- It's just a text file that we want to feed into the Docker build process
 
