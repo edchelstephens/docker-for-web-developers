@@ -249,19 +249,67 @@ NOTE:
 1. Create a container volume that points to the source code
 2. Add your souce code into a custom image that is used to create a container
 
-
 # Dockerfile and Images
 
 Dockerfile
+
 - just a text file that has instructions on it :)
-- These instructions of course are uinique to Docker 
+- These instructions of course are uinique to Docker
 - We run the Dockerfile through the Docker client and it has a `build` command we can run and then that `build` command can read through those
-instructions, generate a layered file system to generate a Docker image that we can then use to make a container from it.
+  instructions, generate a layered file system to generate a Docker image that we can then use to make a container from it.
 - It's just a text file that we want to feed into the Docker build process
 
 # Dockerfile Overview
+
 - Text file used to build Docker images
 - Contains build instructions
 - Instructions create intermediate image that can be cached to speed up future builds
 - Used with `docker build` command
 
+# Dockerfile Key Instructions
+
+`FROM`
+
+- Create an image from a baseline image, like Node.js image, a python image and then you build on top of that using this layered file system
+
+`LABEL`
+
+- label for the image, e.g.
+- mainter/author
+
+`RUN`
+
+- Really important
+- You can actually have different things defined that are going to be run and these would be:
+  - I want to go to the internet and grab something
+  - I want to run npm install, pip install, etc
+
+`COPY`
+
+- When you go to production, you want to copy that source code into the container oftentimes
+
+`ENTRYPOINT`
+
+- The main entry point for the container
+- The initial entry point that kicks off the container
+
+`WORKDIR`
+
+- The working directory
+- This sets the context for where the container is going to run as, for instance, where the entry point is run.
+- So I could say, what folder has my `package.json` and I can do an `npm run`
+
+`EXPOSE`
+
+- Expose a port
+- This is the default port the container would then run internally
+
+`ENV`
+
+- Define environment variables
+- These environment variables can be then used in the container
+
+`VOLUME`
+
+- Define volumes
+- You can define the actual volume and control how it stores that on the host system for the container
