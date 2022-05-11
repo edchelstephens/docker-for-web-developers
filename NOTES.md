@@ -259,3 +259,9 @@ Dockerfile
 instructions, generate a layered file system to generate a Docker image that we can then use to make a container from it.
 - It's just a text file that we want to feed into the Docker build process
 
+# Dockerfile Overview
+- Text file used to build Docker images
+- Contains build instructions
+- Instructions create intermediate image that can be cached to speed up future builds
+- Used with `docker build` command
+
