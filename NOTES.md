@@ -248,3 +248,13 @@ NOTE:
 
 1. Create a container volume that points to the source code
 2. Add your souce code into a custom image that is used to create a container
+
+
+# Dockerfile and Images
+
+Dockerfile
+- just a text file that has instructions on it :)
+- These instructions of course are uinique to Docker 
+- We run the Dockerfile through the Docker client and it has a `build` command we can run and then that `build` command can read through those
+instructions, generate a layered file system to generate a Docker image that we can then use to make a container from it.
+
