@@ -362,3 +362,5 @@ where:
 <tag_string> is a unique string to tag this image build, much like versioning
 
 `.` - is the Build context, which is going to be the folder where it's actually going to run this from that will help find the Dockerfile and do some other things along the way
+
+# Every docker instruction like `FROM`, `COPY`, `RUN` leads to an intermediate container being created that's ultimately cached behind the scense, for faster builds moving forward(if no change then just use the cached version of the instruction)
