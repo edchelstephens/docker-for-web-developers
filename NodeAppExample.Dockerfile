@@ -10,7 +10,7 @@ LABEL author_email="edchelstephens@gmail.com"
 
 # Environment variables that will be available in and available to the container
 ENV NODE_ENV=production
-ENV PORT=8000
+ENV PORT=3000
 
 # Copy the local source code from current working directory into the image into a folder called `/var/www/`
 COPY . /var/www/
