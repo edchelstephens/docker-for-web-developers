@@ -314,15 +314,13 @@ Dockerfile
 - Define volumes
 - You can define the actual volume and control how it stores that on the host system for the container
 
-
 ## Example Dockerfile
 
-
-`FROM    node`
-`LABEL   author="Edchel Stephen Nini"`
-`COPY    . /var/www`
-`WORKDIR     /var/www`
-`RUN     npm install`
+`FROM node`
+`LABEL author="Edchel Stephen Nini"`
+`COPY . /var/www`
+`WORKDIR /var/www`
+`RUN npm install`
 `EXPOSE 8080`
 `ENTRYPOINT [ "node", "server.js" ]`
 
@@ -330,21 +328,21 @@ Where:
 
 `# This will grabe the Node image as the base file system`
 `# And then add addtional layers on top of that`
-`FROM    node`
+`FROM node`
 
 `# Custom labels, author, maintainers etc`
-`LABEL   author="Edchel Stephen Nini"`
+`LABEL author="Edchel Stephen Nini"`
 
 `# Then copy the source code that is in this current directory via the **.** symbol where i'm building from`
 `# Copy that source code into the containers alias location /var/www`
 `# What that will do now is that, this layered file system will have a layer in it that's going to be just for our source code`
-`COPY    . /var/www`
+`COPY . /var/www`
 
 `# Set the working directory to the location of the copied source code which in this case is /var/www in the image`
-`WORKDIR     /var/www`
+`WORKDIR /var/www`
 
 `# Run npm install on curernt working directory`
-`RUN     npm install`
+`RUN npm install`
 
 `# The port we'd like to expose that the container actually runs with`
 `EXPOSE 8080`
@@ -352,3 +350,13 @@ Where:
 `# Define the entry point.`
 `# In this case, the node command and service js is my inital entry point into this container`
 `ENTRYPOINT [ "node", "server.js" ]`
+
+# Building a custom image
+
+Command:
+`docker build -t <username>/<repository>:<tag_string> .`
+where:
+-t is for tag
+<username> is docker hub username
+<repository> is repository name for the image
+<tag_string> is a unique string to tag this image build, much like versioning
