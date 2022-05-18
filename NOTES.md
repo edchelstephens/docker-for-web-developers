@@ -360,3 +360,5 @@ where:
 <username> is docker hub username
 <repository> is repository name for the image
 <tag_string> is a unique string to tag this image build, much like versioning
+
+`.` - is the Build context, which is going to be the folder where it's actually going to run this from that will help find the Dockerfile and do some other things along the way
