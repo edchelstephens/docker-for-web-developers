@@ -4,12 +4,12 @@ LABEL author="Edchel Stephen Nini"
 LABEL author_email="edchelstephens@gmail.com"
 
 ENV NODE_ENV=production
-ENV PORT=8000
+ENV PORT=3000
 
-COPY . /var/www/
-WORKDIR /var/www/
+COPY . /project
+WORKDIR /project
 
-VOLUME ["/var/www"]
+VOLUME ["/project"]
 
 RUN npm install
 
