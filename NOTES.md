@@ -364,3 +364,10 @@ where:
 `.` - is the Build context, which is going to be the folder where it's actually going to run this from that will help find the Dockerfile and do some other things along the way
 
 # Every docker instruction like `FROM`, `COPY`, `RUN` leads to an intermediate container being created that's ultimately cached behind the scense, for faster builds moving forward(if no change then just use the cached version of the instruction)
+
+# Building Custom Images with DockerFile
+
+- Dockerfile is a simple text file with instructions that is used to create an image
+- Each Dockerfile starts with a `FROM` instruction, and then you can add multiple instructions, like another `FROM`
+- Custom images are built using:
+  `docker build -t <username>/<image_name_or_image_repostitory>:<version_tag> <build_context_where_dockerfile_lives_usually a .>`
