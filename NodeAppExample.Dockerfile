@@ -10,7 +10,12 @@ LABEL author_email="edchelstephens@gmail.com"
 
 # Environment variables that will be available in and available to the container
 ENV NODE_ENV=production
-ENV PORT=3000
+
+# This is the internal container port
+# Make sure you expose this when you run the container with
+# `docker run -p <external_port>:<docker_internal_port> which is 8000`
+# `docker run -p <external_port>:8000`
+ENV PORT=8000
 
 # Copy the local source code from current working directory into the image into a folder called `/var/www/`
 COPY . /var/www/
