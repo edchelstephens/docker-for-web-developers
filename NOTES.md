@@ -403,4 +403,16 @@ where:
    `docker run -d --name postgres_db_container postgres`
 
 2. Link to a running container by name
+
+`docker run -d -p <external_port>:<internal_port> --link <linked_custom_container_name>:<linked_custom_container_alias> <tag>`
+
+where:
+`-d` is for daemon mode, that is, run in background
+`-p` is for port
+
+example:
+
+`docker run -d -p 8000:5000 --link postgres_db_container:database_container edchelstephens/express_site:4`
+
 3. Repeat for additional containers
+Repeat steps 1 to 2 up to as many containers you need to link
