@@ -42,8 +42,15 @@ For example:
 
 ## Image
 
-- `docker pull [image name]`
+- `docker pull [image name optionally with tag and version]`
   - pull an image from docker hub
+  - e.g.
+  `docker pull edchelstephens/express_site:1`
+
+- `docker push [image name optionally with tag and version]`
+  - push an image to docker hub
+  - `docker push edchelstephens/express_site:2`
+
 - `docker images`
   - see list of all iamges
 - `docker rmi [image Id]`
