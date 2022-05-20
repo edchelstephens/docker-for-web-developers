@@ -371,3 +371,15 @@ where:
 - Each Dockerfile starts with a `FROM` instruction, and then you can add multiple instructions, like another `FROM`
 - Custom images are built using:
   `docker build -t <username>/<image_name_or_image_repostitory>:<version_tag> <build_context_where_dockerfile_lives_usually a .>`
+
+# Container Linking
+
+## Docker Container Linking Options
+
+1. Use Legacy Linking
+
+- Done using Container names
+- Under the hood, it creates what's called a `bridge network` and within that network you can communicate between the containers,
+  based on the name of the containers
+
+2.
