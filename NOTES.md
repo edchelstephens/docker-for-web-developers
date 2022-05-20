@@ -390,3 +390,17 @@ where:
   one network for a certain set of containers to communicate,
   another network for some other containers that they need to communicate
   This allows us to divide things up a little more elegantly than what you can do with the older legacy linking
+
+### Docker Container Linking via Legacy linking(using container names)
+
+#### Steps to link containers
+
+1. Run a container with a name
+   `docker run -d --name <custom_container_name> <image_name>`
+   where:
+   `-d` is for daemon mode, that is, run in background
+   example:
+   `docker run -d --name postgres_db_container postgres`
+
+2. Link to a running container by name
+3. Repeat for additional containers
