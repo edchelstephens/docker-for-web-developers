@@ -382,4 +382,11 @@ where:
 - Under the hood, it creates what's called a `bridge network` and within that network you can communicate between the containers,
   based on the name of the containers
 
-2.
+2. Add Containers to a Bridge Network
+
+- Done by adding containers to a **custom bridge network**
+- This custom bridget network is isolated and only the containers in that network can communicate with each other.
+  This is nice because now we can cerate specific networks for specific use cases:
+  one network for a certain set of containers to communicate,
+  another network for some other containers that they need to communicate
+  This allows us to divide things up a little more elegantly than what you can do with the older legacy linking
