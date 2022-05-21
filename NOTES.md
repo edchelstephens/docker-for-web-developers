@@ -482,3 +482,15 @@ where:
 ## Docker Compose manages your application lifecycle
 
 - It allows you to have multiple images and then convert those images into containers and the overall lifecycle of these containers
+
+-Services in docker compose are really just running containers
+
+# Docker Compose Features
+
+It Manages the whole application lifecycle
+
+- Start, stop and rebuild services
+- View the status of running services
+- Stream the log output of running services
+- Run a one-off command on a service
+
