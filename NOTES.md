@@ -515,3 +515,7 @@ It Manages the whole application lifecycle
 ## docker-compose.yml
 
 - a service configuration file, just a yml file with configuration for docker, just a normal text file with instructions that we can run thru the docker build process
+
+## Docker Compose Workflow
+
+docker-compose.yml -> Docker Compose Build -> Docker Images that get's run as containers which are now called Services
