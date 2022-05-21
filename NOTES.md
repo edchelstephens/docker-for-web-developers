@@ -469,8 +469,16 @@ where:
 
 # The official term for Docker Container Linking via Container Network or Bridge Network is `Container Networking with a Bridge Driver`
 
-
 # Docker containers communicate using link or network functionality
+
 # The `--link` command line switch provides "legacy linking" by name
+
 # The `--net` command line switch can be used to setup a bridge network -- preferred than legacy linking
+
 # Docker Compose can be used to link multiple containers to each other --> preferred when linking 2 or more containers --> the preferred way moving forwards
+
+# Docker Compose
+
+## Docker Compose manages your application lifecycle
+
+- It allows you to have multiple images and then convert those images into containers and the overall lifecycle of these containers
