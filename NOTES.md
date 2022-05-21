@@ -557,3 +557,38 @@ networks: - nodeapp-network
 networks:
 nodeapp-network
 driver:bridge
+
+# Docker Compose Key Commands
+
+Once you have your docker-compose.yml file, you can then run the following commands
+
+`docker-compose build`
+
+- build our services into images
+
+`docker-compose up`
+
+- once build is done and you have your images, you can the images up as running containers with this command
+
+`docker-compose down`
+
+- turn down the running containers or services
+
+`docker-compose logs`
+-view the logs
+
+`docker-compose ps`
+
+- list the differnt containers that are running our services
+
+`docker-compose stop`
+
+- stop all the different services
+
+`docker-compose start`
+
+- start the different services
+
+`docker-compose rm`
+
+- remove the different containers that are making up our services
