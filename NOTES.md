@@ -439,3 +439,20 @@ example:
 - So if you ever do have code that has to seed a lookup table for example, you might call and it fails because the database hasn't finished loading in the container yet.
 - All linking does is make sure that they start in proper oder. It doesn't guarantee the database is done setting up.
 - This is something to be aware of, and that means you might have to have some try catch type code and some retries if you're seeding something, specially in development
+
+### Docker Container Linking via Container Network or Bridge Network
+
+### Steps to Linking:
+
+1. Create a custom bridge network
+   `docker network create --driver bridge isolated_network`
+
+   where:
+   `network create` - create a custom network
+   `bridge` - use a bridge network
+   `isolated_network` - name of the custom network
+
+   generic form:
+   `docker network create --driver bridge <network_name>`
+
+2. Run containers in the network
