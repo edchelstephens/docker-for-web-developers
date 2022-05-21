@@ -494,3 +494,18 @@ It Manages the whole application lifecycle
 - Stream the log output of running services
 - Run a one-off command on a service
 
+# Docker Compose Workflow
+
+- Once you have your Dockerfiles setup and docker-compose.yml is then you're gonna use docker compose to
+
+1. Build Services
+
+- under the covers, this just creates images
+
+2. Start Services
+
+- Run the built images as containers and they are called `services` in the docker compose world
+
+3. Tear Down Services
+
+- once we're done, we can tear down those services, stop the containers and even remove them
