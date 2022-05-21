@@ -509,3 +509,9 @@ It Manages the whole application lifecycle
 3. Tear Down Services
 
 - once we're done, we can tear down those services, stop the containers and even remove them
+
+# The Role of the Docker Compose File
+
+## docker-compose.yml
+
+- a service configuration file, just a yml file with configuration for docker, just a normal text file with instructions that we can run thru the docker build process
