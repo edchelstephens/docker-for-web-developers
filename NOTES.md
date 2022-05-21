@@ -456,3 +456,10 @@ example:
    `docker network create --driver bridge <network_name>`
 
 2. Run containers in the network
+   `docker run -d --net=isolated_network --name mongodb mongo`
+
+where:
+`-d` is for daemon mode, run in background
+`--net=isolated_network` is specifying the network this container will run on, with generic form `--net=<network_name>`
+`--name mongdbo` - the custom name for this container
+`mongo` - the docker image from which to run this container
