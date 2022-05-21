@@ -519,3 +519,41 @@ It Manages the whole application lifecycle
 ## Docker Compose Workflow
 
 docker-compose.yml -> Docker Compose Build -> Docker Images that get's run as containers which are now called Services
+
+# docker-compose.yml generic format:
+
+version: <version_string>
+services:
+<name_of_service>:
+build:
+context: .
+dockerfile: <dockerfile>
+networks: # networks this service is connected to - <name_of_network>
+
+<name_of_service>:
+image:<image>
+networks: - <name_of_network>
+
+networks:
+<name_of_network>
+driver:bridge
+
+docker-compose.yml Example:
+
+# ---- docker-compose.yml file -------
+
+version: "3.x"
+services:
+node:
+build:
+context: .
+dockerfile: node.dockerfile
+networks: - nodeapp-network
+
+mongodb:
+image:mongo
+networks: - nodeapp-network
+
+networks:
+nodeapp-network
+driver:bridge
