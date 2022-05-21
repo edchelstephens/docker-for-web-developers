@@ -466,3 +466,5 @@ where:
 `--net=isolated_network` is specifying the network this container will run on, with generic form `--net=<network_name>`
 `--name mongdbo` - the custom name for this container
 `mongo` - the docker image from which to run this container
+
+# The official term for Docker Container Linking via Container Network or Bridge Network is `Container Networking with a Bridge Driver`
