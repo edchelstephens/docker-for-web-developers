@@ -43,17 +43,20 @@ For example:
 ## Image
 
 - `docker pull [image name optionally with tag and version]`
+
   - pull an image from docker hub
   - e.g.
-  `docker pull edchelstephens/express_site:1`
+    `docker pull edchelstephens/express_site:1`
 
 - `docker push [image name optionally with tag and version]`
+
   - push an image to docker hub
   - `docker push edchelstephens/express_site:2`
 
 - `docker images`
   - see list of all iamges
 - `docker rmi [image Id]`
+
   - removes image
 
 - `docker run -e <environment_variable>=<value> postgres`
@@ -427,4 +430,12 @@ example:
 `docker run -d -p 8000:5000 --link postgres_db_container:database_container edchelstephens/express_site:4`
 
 3. Repeat for additional containers
-Repeat steps 1 to 2 up to as many containers you need to link
+   Repeat steps 1 to 2 up to as many containers you need to link
+
+### Note on linking containers
+
+- Docker run isn't gonna wait for services like database to be setup.
+- There's no way for Docker to know when Postgres or Mongo or any of these specially databases are finished loading.
+- So if you ever do have code that has to seed a lookup table for example, you might call and it fails because the database hasn't finished loading in the container yet.
+- All linking does is make sure that they start in proper oder. It doesn't guarantee the database is done setting up.
+- This is something to be aware of, and that means you might have to have some try catch type code and some retries if you're seeding something, specially in development
