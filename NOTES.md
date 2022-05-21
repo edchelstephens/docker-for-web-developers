@@ -64,6 +64,9 @@ For example:
 - example:
   `docker run -e DB_PASSWORD=password123 postgres`
 
+- `docker network ls`
+- list docker networks
+
 ## Container
 
 - `docker run [image name]`
