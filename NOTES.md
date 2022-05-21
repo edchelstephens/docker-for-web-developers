@@ -56,6 +56,11 @@ For example:
 - `docker rmi [image Id]`
   - removes image
 
+- `docker run -e <environment_variable>=<value> postgres`
+- run postgres image into a container and set environment variable into that container
+- example:
+  `docker run -e DB_PASSWORD=password123 postgres`
+
 ## Container
 
 - `docker run [image name]`
