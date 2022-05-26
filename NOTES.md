@@ -592,3 +592,18 @@ Once you have your docker-compose.yml file, you can then run the following comma
 `docker-compose rm`
 
 - remove the different containers that are making up our services
+
+# Building Services
+
+Build Services ----> Start up Services ----> Tear Down Services
+
+`docker-compose build`
+
+- this will automatically build or rebuild all of the different service images that we need and that are all defined in docker-compose.yml
+
+Single build:
+
+`docker-compose build mongo`
+
+- this will only build/rebuild mongo series
+
