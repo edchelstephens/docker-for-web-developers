@@ -597,6 +597,8 @@ Once you have your docker-compose.yml file, you can then run the following comma
 
 Build Services ----> Start up Services ----> Tear Down Services
 
+## Build
+
 `docker-compose build`
 
 - this will automatically build or rebuild all of the different service images that we need and that are all defined in docker-compose.yml
@@ -607,3 +609,13 @@ Single build:
 
 - this will only build/rebuild mongo series
 
+## Starting Services Up
+
+`docker-compose up`
+
+- this creates and starts the containers
+- this includes linking them together if you're doing linking technology or using bridge network, whatever you're using in docker-compose.yml
+- compare this to manual docker run:
+  `docker run -d --net=isolated_network --name nodeapp -p 8000:3000 edchelstephens/express_site:1`
+
+  which is really long and difficult. No need for this anymore, just configure in docker-compose.yml, build and run with docker-compose up
