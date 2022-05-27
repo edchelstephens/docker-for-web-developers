@@ -629,6 +629,10 @@ Do not recreate services that depends on something wiht --no-deps
 - This rebuilds node image and stop, destroy and recreate only the node image
 - Just rebuild this single service, excluding dependencies
 
+`docker-compose up -d`
+
+- Run containers in daemon mode, or in the background
+
 ## Tear Down Services
 
 `docker-compose down`
@@ -639,6 +643,7 @@ If you want to just stop and not remove, then use:
 `docker-compose stop`
 
 Options:
+
 - Remove all images and volumes as well:
 
 `docker compose-down --rmi all --volumes`
