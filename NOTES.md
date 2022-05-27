@@ -619,3 +619,12 @@ Single build:
   `docker run -d --net=isolated_network --name nodeapp -p 8000:3000 edchelstephens/express_site:1`
 
   which is really long and difficult. No need for this anymore, just configure in docker-compose.yml, build and run with docker-compose up
+
+Options with `docker-compose up`
+
+Do not recreate services that depends on something wiht --no-deps
+
+`docker-compose up --no-deps node`
+
+- This rebuilds node image and stop, destroy and recreate only the node image
+- Just rebuild this single service, excluding dependencies
