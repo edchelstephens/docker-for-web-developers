@@ -597,7 +597,7 @@ Once you have your docker-compose.yml file, you can then run the following comma
 
 Build Services ----> Start up Services ----> Tear Down Services
 
-## Build
+## Build Services
 
 `docker-compose build`
 
@@ -628,3 +628,17 @@ Do not recreate services that depends on something wiht --no-deps
 
 - This rebuilds node image and stop, destroy and recreate only the node image
 - Just rebuild this single service, excluding dependencies
+
+## Tear Down Services
+
+`docker-compose down`
+
+- This takes all of the containers, stops and removes them.
+
+If you want to just stop and not remove, then use:
+`docker-compose stop`
+
+Options:
+- Remove all images and volumes as well:
+
+`docker compose-down --rmi all --volumes`
