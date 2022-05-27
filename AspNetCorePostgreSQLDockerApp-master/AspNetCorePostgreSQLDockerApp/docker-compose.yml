@@ -1,26 +1,21 @@
-version: '3.7'
-
+version: "3.8"
 services:
-
   web:
-    container_name: 'aspnetcoreapp'
-    image: 'aspnetcoreapp'
+
+    container_name: "aspnetcoreapp_container"
+    image: "aspnetcoreapp_image"
     build:
       context: .
       dockerfile: aspnetcore.dockerfile
     ports:
-     - "5000:5000"
-    depends_on:
-     - "postgres"
+      - "8080:5000"
     networks:
       - aspnetcoreapp-network
 
   postgres:
-    container_name: 'postgres'
     image: postgres
     environment:
-      # change this for a "real" app!
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: password # Change this on production
     networks:
       - aspnetcoreapp-network
 
