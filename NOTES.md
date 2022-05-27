@@ -646,4 +646,4 @@ Options:
 
 - Remove all images and volumes as well:
 
-`docker compose-down --rmi all --volumes`
+`docker-compose down --rmi all --volumes`
