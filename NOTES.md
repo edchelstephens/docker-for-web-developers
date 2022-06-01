@@ -647,3 +647,10 @@ Options:
 - Remove all images and volumes as well:
 
 `docker-compose down --rmi all --volumes`
+
+# Docker Compose summary
+
+- Docker compose simplifies the process of building, starting and stopping services
+- docker-compose.yml defines services
+- A service is really just a running container
+- excellent way to manage services used in a development environment
