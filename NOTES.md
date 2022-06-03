@@ -667,8 +667,20 @@ Options:
 - Have a robust networking and persisten storage options
 
 # What if we could define the containers we want and then hand it off to a system that manages it all for us?
+
 # - Well, welcome to Kubernetes, K8s does all of that! :)
 
 # Kubernetes - K8s
+
 - Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applciations
 - kubernetes.io
+
+# Analogies
+
+## Sports Team - Containers as players, Kubernetes as coach
+
+- In a perspective of sports team,
+  the players are the containers and kubernetes is the coach, managing the play and the players
+- Kubernetes is the coach of a container team
+
+## Orchestra - The orchestra players as the container, Kubernetes as the conductor
