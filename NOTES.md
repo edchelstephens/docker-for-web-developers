@@ -705,6 +705,7 @@ Options:
 - and More
 
 ## Kubernetes the big picture
+
 - Kubernets is gonna have a `master node`
 - The `master node` is in charge of keeping all the children nodes in line
 - These `children nodes` are called `worker nodes`
@@ -712,3 +713,25 @@ Options:
 - A `node` is like a `VM`, and a `pod` is a container for containers
 - Now with `multiple nodes being managed by a master`, we call that a `cluster`
 - So we can have a cluster of virtual machines, we can scale out, scale in, etc
+
+# Key Kubernetes Concepts
+
+## Deployment
+
+#### - Describe desired steate
+
+- This allows us to describe the desired state we're after in one of two types of files:
+
+  - we can use a YAML file, which is the normal one
+  - or even a JSON file
+
+- So what we'll be doing as we convert from Docker Compose to Kubernetes:
+  - one option would be to basically translate the services in our Docker Compose file that defines the images and the containers that should run into a Kubernetes Deployment file.
+  - Deployment in a nutshell is really saying hey, I need these five containers up and running, and I need them to communicate somehow
+
+#### - Can be used to replicate pods
+
+#### - Supports rolling updates and rollbacks
+
+
+## Service
