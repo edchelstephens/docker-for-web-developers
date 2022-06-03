@@ -654,3 +654,17 @@ Options:
 - docker-compose.yml defines services
 - A service is really just a running container
 - excellent way to manage services used in a development environment
+
+# Kubernetes
+
+# It would be nice if we could:
+
+- Package an app, provide a manifest, and let something else manage it for us
+- Not worry about the management of containers
+- Eliminate single points of failure and self-heal containers
+- Have a robust way to scale and load balance containers
+- Update containers without brining down the application
+- Have a robust networking and persisten storage options
+
+# What if we could define the containers we want and then hand it off to a system that manages it all for us?
+# - Well, welcome to Kubernetes, K8s does all of that! :)
