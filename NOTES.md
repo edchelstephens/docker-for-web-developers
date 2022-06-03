@@ -684,3 +684,22 @@ Options:
 - Kubernetes is the coach of a container team
 
 ## Orchestra - The orchestra players as the container, Kubernetes as the conductor
+
+# Kubernetes Overview
+
+- Container and cluster management
+- Supported by all major cloud platforms
+- Provides a declarative way to define a cluster's state using manifest files (YAML)
+  Which is very similar to docker-compose on this regard
+- Interact with Kubernetes API using command-line tool `kubectl` or "kube cuddle" or "kube kotl" hehe
+
+## Key Features
+
+- Source Discovery/Load Balancing
+- Storage Orchestration
+- Automate Rollouts/Rollbacks
+- Manage Workloads
+- Self-healing
+- Secret and configuration management
+- Horizontal Scaling
+- and More
