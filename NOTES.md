@@ -668,3 +668,7 @@ Options:
 
 # What if we could define the containers we want and then hand it off to a system that manages it all for us?
 # - Well, welcome to Kubernetes, K8s does all of that! :)
+
+# Kubernetes - K8s
+- Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applciations
+- kubernetes.io
