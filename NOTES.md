@@ -750,8 +750,8 @@ Options:
 - `kubectl version`
 - get version of kubernetes
 
-- `kubectl get [deployments | services | pods]`
-- get information on any deployments, services or pods
+- `kubectl get [deployments | services | pods | nodes]`
+- get information on any deployments, services, pods or nodes
 
 - `kubectl run nginx-server --image=nginx:alpine`
 - generic format: `kubectl run <name> --image=<image>`
@@ -762,3 +762,18 @@ Options:
 
 - `kubectl port-forward [name-of-pod] 8080:80`
 - expose a port of a pod so we can get to it
+
+## Stoping and Removing Containers on Kubernetes
+
+-`kubectl delete -f[fileName | folderName]`
+
+# Kubernetes summary
+
+- Kubernetes provides a robust solution for automating deployment, scaling and management of containers
+- Provides a way to move to a desired state
+- Relies on YAML (or JSON) files to represent desired state
+- Nodes and pods play a central role
+- Nodes are VMs
+- Pods act as a way to group one or more containers together
+- A container runs in a pod
+- `kubectl` can be used to issue commands and interact with the Kubernetes API
