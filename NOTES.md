@@ -733,5 +733,14 @@ Options:
 
 #### - Supports rolling updates and rollbacks
 
-
 ## Service
+
+#### - Pods live and die
+
+- If a container goes down, the pod may be completely removed and a new pod might be brought up
+- Pods can have a short or a long life span, it really depends on the application scenarios
+- Therefore pod IP address cannot be relied upon but services got this by abstracting the pod IP address for consumers
+
+#### - Services abstract pod IP address from consumers
+
+#### - Load balances between pods
