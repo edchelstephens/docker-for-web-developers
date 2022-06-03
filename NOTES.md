@@ -744,3 +744,21 @@ Options:
 #### - Services abstract pod IP address from consumers
 
 #### - Load balances between pods
+
+#### Kubernetes Key commands
+
+- `kubectl version`
+- get version of kubernetes
+
+- `kubectl get [deployments | services | pods]`
+- get information on any deployments, services or pods
+
+- `kubectl run nginx-server --image=nginx:alpine`
+- generic format: `kubectl run <name> --image=<image>`
+- run a container with a alias name using an image
+
+- `kubectl apply -f [fileName | folderName]`
+- if we already have our kubernetes deployment file or files, just run apply to get the cluster running
+
+- `kubectl port-forward [name-of-pod] 8080:80`
+- expose a port of a pod so we can get to it
