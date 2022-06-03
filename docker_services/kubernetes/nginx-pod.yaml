@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.network/codewithdan-network: "true"
+    io.kompose.service: nginx
+  name: nginx
+spec:
+  containers:
+    - image: edchelstephens/nginx
+      name: nginx
+      ports:
+        - containerPort: 80
+        - containerPort: 443
+      resources: {}
+  restartPolicy: OnFailure
+status: {}

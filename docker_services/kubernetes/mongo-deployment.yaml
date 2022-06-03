@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mongo
+  name: mongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mongo
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (HEAD)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/codewithdan-network: "true"
+        io.kompose.service: mongo
+    spec:
+      containers:
+        - env:
+            - name: MONGODB_DBNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGODB_DBNAME
+                  name: docker-env-mongo-production-env
+            - name: MONGODB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGODB_PASSWORD
+                  name: docker-env-mongo-production-env
+            - name: MONGODB_ROLE
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGODB_ROLE
+                  name: docker-env-mongo-production-env
+            - name: MONGODB_ROOT_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGODB_ROOT_PASSWORD
+                  name: docker-env-mongo-production-env
+            - name: MONGODB_ROOT_ROLE
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGODB_ROOT_ROLE
+                  name: docker-env-mongo-production-env
+            - name: MONGODB_ROOT_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGODB_ROOT_USERNAME
+                  name: docker-env-mongo-production-env
+            - name: MONGODB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: MONGODB_USERNAME
+                  name: docker-env-mongo-production-env
+          image: edchelstephens/mongo
+          name: mongo
+          ports:
+            - containerPort: 27017
+          resources: {}
+      restartPolicy: Always
+status: {}
