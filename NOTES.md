@@ -703,3 +703,12 @@ Options:
 - Secret and configuration management
 - Horizontal Scaling
 - and More
+
+## Kubernetes the big picture
+- Kubernets is gonna have a `master node`
+- The `master node` is in charge of keeping all the children nodes in line
+- These `children nodes` are called `worker nodes`
+- The `woker nodes` will have a `pod` inside of them
+- A `node` is like a `VM`, and a `pod` is a container for containers
+- Now with `multiple nodes being managed by a master`, we call that a `cluster`
+- So we can have a cluster of virtual machines, we can scale out, scale in, etc
